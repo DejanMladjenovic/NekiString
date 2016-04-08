@@ -1,18 +1,26 @@
 package nekiString;
 
+import java.util.ArrayList;
+
 public class Metode {
 	
-	public int duzinaStringa(String str){	
+	public int duzinaStringa(String str){
+		int brojac = str.length();
 		
-		return 0;
+		return brojac;
 	}
 	
-	public char[] parniKarakteri(String str){
-		
-		return null;
+	public ArrayList<String> parniKarakteri(String str){
+	
+		ArrayList<String> list = new ArrayList<>();
+		for(int i = 1; i < str.length(); i+= 2){
+			String a = Character.toString(str.charAt(i));
+			list.add(a);
+		}
+		return list;
 	}
 	
-	public char[] neparniKarakteri(String str){
+	public ArrayList<String> neparniKarakteri(String str){
 		
 		return null;
 	}
@@ -27,7 +35,7 @@ public class Metode {
 		return 0;
 	}
 	
-	public char[] neSlova(String str){
+	public ArrayList<String> neSlova(String str){
 		
 		return null;
 	}
