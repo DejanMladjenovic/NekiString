@@ -19,12 +19,12 @@ public class GlavnaMetoda {
 		
 		//Ispisi rezultate
 		System.out.println("Vas string: " + str);
-		System.out.println("Duzina stringa: " + o.duzinaStringa());
-		System.out.println("Parni karakteri: " + o.parniKarakteri());
-		System.out.println("Neparni karakteri: " + o.neparniKarakteri());
-		System.out.println("Velika slova: " + o.velikaSlova());
-		System.out.println("Mala slova: " + o.malaSlova());
-		System.out.println("Ostali karakteri: " + o.neSlova());
+		System.out.println("Duzina stringa: " + o.duzinaStringa(str));
+		System.out.println("Parni karakteri: " + o.parniKarakteri(str));
+		System.out.println("Neparni karakteri: " + o.neparniKarakteri(str));
+		System.out.println("Velika slova: " + o.velikaSlova(str));
+		System.out.println("Mala slova: " + o.malaSlova(str));
+		System.out.println("Ostali karakteri: " + o.neSlova(str));
 	}
 
 }
