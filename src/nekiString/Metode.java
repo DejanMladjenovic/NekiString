@@ -13,38 +13,56 @@ public class Metode {
 	
 	/**Vraca parne karaktere u datom stringu*/
 	public ArrayList<String> parniKarakteri(String str){
-	
 		ArrayList<String> list = new ArrayList<>();
 		for(int i = 1; i < str.length(); i+= 2){
 			String a = Character.toString(str.charAt(i));
 			list.add(a);
 		}
-		
 		return list;
 	}
 	
 	/**Vraca neparne karaktere u datom stringu*/
 	public ArrayList<String> neparniKarakteri(String str){
-		
-		return null;
+		ArrayList<String> list = new ArrayList<>();
+		for(int i = 0; i < str.length(); i+= 2){
+			String a = Character.toString(str.charAt(i));
+			list.add(a);
+		}
+		return list;
 	}
 	
-	/**vraca velika slova u datom stringu*/
+	/**Vraca broj velikih slova u datom stringu*/
 	public int velikaSlova(String str){
-		
-		return 0;
+		int brojac= 0;
+		char[] slova = str.toCharArray();
+		for(char c: slova){
+			if(Character.isUpperCase(c))
+				brojac++;
+		}
+		return brojac;
 	}
 	
-	/**Mala slova u datom stringu*/
+	/**Vraca broj malih slova u datom stringu*/
 	public int malaSlova(String str){
-		
-		return 0;
+		int brojac= 0;
+		char[] slova = str.toCharArray();
+		for(char c: slova){
+			if(Character.isLowerCase(c))
+				brojac++;
+		}
+		return brojac;
 	}
 	
 	/**Vraca karaktere u datom stringu koji nisu slova*/
 	public ArrayList<String> neSlova(String str){
-		
-		return null;
+		ArrayList<String> list = new ArrayList<>();
+		for(int i = 0; i < str.length(); i++){
+			if(!Character.isLetter(str.charAt(i)) && !Character.isWhitespace(str.charAt(i))){
+				String s = Character.toString(str.charAt(i));
+				list.add(s);
+			}
+		}
+		return list;
 	}
 
 }
